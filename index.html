@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            background-color: #0a4d68;
+            color: white;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .container ul {
+            display: flex;
+            justify-content: right;
+            gap: 30px;
+            list-style-type: none;
+
+        }
+
+        .container ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container .right img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: solid 4px #68c3e7
+        }
+
+        .container .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .container .right input {
+            padding: 10px;
+            border: solid #68c3e7 4px;
+            border-radius: 10px;
+        }
+
+        .hero {
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 50px;
+        }
+
+        .hero p {
+            color: white;
+            margin: 15px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .about {
+            background-color: #eaf6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            gap: 40px;
+
+        }
+
+        .about-image img {
+            width: 450px;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            max-width: 500px;
+        }
+
+        .about-content h2 {
+            color: #008cba;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .places {
+            background-color: #eaf6ff;
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgb(63, 161, 241);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px;
+        }
+
+        .card p {
+            padding: 0 15px 20px;
+
+        }
+
+
+        .services {
+            background: #eaf6ff;
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .service-box div {
+            width: 280px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .contact-section {
+            background-color: #eaf6ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            flex: 1;
+            background: #0d6efd;
+            color: white;
+            padding: 50px;
+        }
+
+        .contact-info h1 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+        }
+
+        .info {
+            margin-top: 25px;
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 50px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            border: none;
+            background: #0d6efd;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #084298;
+        }
+
+        @media(max-width:768px) {
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header or Nav Bar-->
+    <div class="container">
+        <h1>Tourist</h1>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="right">
+            <input placeholder="Enter the search" />
+            <img src="image/img.jpg">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <section id="Home" class="hero">
+        <div class="hero-content">
+            <h2>Explore The World</h2>
+            <p>Discover amazing places and unforgettable experiences.</p>
+            <a href="#Gallery" class="btn">Explore Now</a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="About" class="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Tourist Place">
+        </div>
+
+        <div class="about-content">
+            <h2>About Tourist Framework</h2>
+            <p>
+                Tourist Framework is a travel platform designed to help people
+                explore beautiful destinations around the world. We provide
+                information about famous tourist attractions, travel guides,
+                accommodation, and exciting activities.
+            </p>
+
+            <p>
+                Our mission is to make travel easy, enjoyable, and memorable
+                for everyone. Whether you love mountains, beaches, forests,
+                or historical places, Tourist Framework helps you find the
+                perfect destination for your next adventure.
+            </p>
+        </div>
+    </section>
+
+    <!--photos Section -->
+
+    <section id="Gallery" class="places">
+        <h2>Tourist Places</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="image/munnar tea plantations.jpg">
+                <h2>Munnar</h2>
+                <p>Munnar is a premier, scenic hill station in the Idukki district of Kerala, India.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/sivan.jpg" />
+                <h2>Sivan</h2>
+                <p>The Adiyogi Shiva statue is a massive 112-foot-tall, 500-tonne steel bust of the Hindu deity Shiva,
+                    located at the Isha Yoga Center in Coimbatore, Tamil Nadu.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/taj mahal.jpg">
+                <h2>Taj Mahal</h2>
+                <p>The Taj Mahal is an iconic ivory-white marble mausoleum located in Agra, India.</p>
+            </div>
+            <div class="card">
+                <img src="image/kashmir.jpg">
+                <h2>Kashmir</h2>
+                <p>Kashmir is a mountainous region in the northernmost part of the Indian subcontinent.</p>
+            </div>
+            <div class="card">
+                <img src="image/jaipur.jpg">
+                <h2>Jaipur</h2>
+                <p>Jaipur is the capital and largest city of the Indian state of Rajasthan.</p>
+            </div>
+            <div class="card">
+                <img src="image/India_Gate_.jpg">
+                <h2>Indian Gate</h2>
+                <p>The India Gate is a towering, 42-meter-tall war memorial located in New Delhi, India.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--service section-->
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-box">
+            <div>
+                <h3>Hotel Booking</h3>
+                <p>Best hotels at affordable prices.</p>
+            </div>
+
+            <div>
+                <h3>Tour Guides</h3>
+                <p>Professional guides for every destination.</p>
+            </div>
+
+            <div>
+                <h3>Transportation</h3>
+                <p>Comfortable travel arrangements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--contact section-->
+
+    <section id="Contact" class="contact-section">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h1>Tourist Framework</h1>
+                <p>Plan your dream vacation with us. Contact our travel experts for bookings, packages, and destination
+                    guidance.</p>
+
+                <div class="info">
+                    <h3>📍 Address</h3>
+                    <p>123 Tourist Street, Chennai, India</p>
+                </div>
+
+                <div class="info">
+                    <h3>📞 Phone</h3>
+                    <p>+91 1234567899</p>
+                </div>
+
+                <div class="info">
+                    <h3>✉ Email</h3>
+                    <p>touristframework@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+
+                    <input type="email" placeholder="Your Email" required>
+
+                    <input type="text" placeholder="Destination">
+
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
